@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -26,4 +30,14 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.4.0'
     testCompile 'junit:junit:4.12'
+
+    // OkHttp for downloading maps
+    compile "com.squareup.okhttp:okhttp:2.7.5"
+
+    // RxJava
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    // RxBinding wrappers
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }
